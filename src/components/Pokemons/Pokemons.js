@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Container from '../UI/Container';
 import axios from 'axios';
+import PokemonCard from './PokemonCard';
+
 function Pokemons() {
     const[pokemons, setPokemons] = useState([]);
 
@@ -9,8 +11,11 @@ function Pokemons() {
       axios.get("https://pokeapi.co/api/v2/pokemon")
       .then(response => setPokemons(response.data.results))
     }, [])
-    return <Container title={"Pokemon"}>
+    
 
+    return <Container title={"Pokemons"} pokemons={pokemons}>
+       
+  
     </Container>
    
   }
