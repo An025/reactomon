@@ -1,7 +1,7 @@
 import React from 'react';
-
+import Container from '../UI/Container'
 function Pokemons() {
-    return <h2>Pokemons</h2>;
+    return <Container title={"Pokemon"}/>;
   }
 
 export default Pokemons;
