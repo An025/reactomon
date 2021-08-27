@@ -4,6 +4,7 @@ import Types from "../Pokemons/Types";
 import Image from './Image';
 import logo from './../../images/header.png';
 import classes from './NavBar.module.css';
+import Button from './Button';
 
 import {
   BrowserRouter as Router,
@@ -20,10 +21,14 @@ export default function App(props) {
           <Image path={logo} title="Pokemon"/>
           <ul>
             <li>
-              <Link to="/pokemons">Pokemons</Link>
+              <Link to="/pokemons">
+                <Button title={"Pokemons"}/>
+                </Link>
             </li>
             <li>
-              <Link to="/types">Types</Link>
+              <Link to="/types">
+                <Button title={"Types"}/>
+                </Link>
             </li>
           </ul>
         </nav>
