@@ -1,7 +1,9 @@
 import React from "react";
 import Pokemons from "../Pokemons/Pokemons";
 import Types from "../Pokemons/Types";
-
+import Image from './Image';
+import logo from './../../images/header.png';
+import Card from './Card';
 
 import {
   BrowserRouter as Router,
@@ -15,6 +17,7 @@ export default function App() {
     <Router>
       <div>
         <nav>
+          <Image path={logo} title="Pokemon"/>
           <ul>
             <li>
               <Link to="/pokemons">Pokemons</Link>
