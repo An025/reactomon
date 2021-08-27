@@ -3,7 +3,7 @@ import Pokemons from "../Pokemons/Pokemons";
 import Types from "../Pokemons/Types";
 import Image from './Image';
 import logo from './../../images/header.png';
-import Card from './Card';
+import classes from './NavBar.module.css';
 
 import {
   BrowserRouter as Router,
@@ -12,11 +12,11 @@ import {
   Link
 } from "react-router-dom";
 
-export default function App() {
+export default function App(props) {
   return (
     <Router>
       <div>
-        <nav>
+        <nav className={classes.navbar}>
           <Image path={logo} title="Pokemon"/>
           <ul>
             <li>

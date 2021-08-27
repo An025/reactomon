@@ -1,0 +1,30 @@
+
+.navbar ul{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin-right: 50px;
+    width: 200px;
+    text-align: center;
+    letter-spacing: .5rem;
+    padding: 10px 10px;
+    background-color: #06214D;
+    color: #D0D9F5;
+    border-radius: 10px;
+}
+
+.navbar ul li a,
+.navbar ul li a:visited{
+    text-decoration: none;
+    color: #D0D9F5;
+}
+
+.navbar ul li:hover{
+    background-color: #23457A;
+    color: #D0D9F5;
+}
