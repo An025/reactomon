@@ -6,7 +6,6 @@ function Pokemons() {
     const[pokemons, setPokemons] = useState([]);
 
     useEffect(()=>{
-      console.log("Hello axios");
       axios.get("https://pokeapi.co/api/v2/pokemon")
       .then(response => setPokemons(response.data.results))
     }, [])

@@ -19,7 +19,7 @@ function PokemonCard(props){
         console.log("pokemon axios")
         axios.get(props.url)
         .then(response => {
-            console.log(response.data.species)
+            // console.log(response.data.species)
             setId(response.data.id)
             setImageUrl(response.data.sprites.front_default);
         })
