@@ -6,7 +6,7 @@ function Container(props){
         <h1>{props.title}</h1>
         <div>
             {props.pokemons.map((pokemon)=>(
-                <PokemonCard name={pokemon.name}/>
+                <PokemonCard name={pokemon.name} url={pokemon.url}/>
         ))}
         </div>
         

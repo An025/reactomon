@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Container from '../UI/Container';
 import axios from 'axios';
-import PokemonCard from './PokemonCard';
 
 function Pokemons() {
     const[pokemons, setPokemons] = useState([]);
@@ -13,11 +12,7 @@ function Pokemons() {
     }, [])
     
 
-    return <Container title={"Pokemons"} pokemons={pokemons}>
-       
-  
-    </Container>
-   
+    return <Container title={"Pokemons"} pokemons={pokemons}/>   
   }
 
 export default Pokemons;
