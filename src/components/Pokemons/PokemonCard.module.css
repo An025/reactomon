@@ -1,0 +1,15 @@
+.card{
+    background-color: #4064AB;
+    display: inline-block;
+    width: 22%;
+    height: 200px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    
+ 
+}
+
+.card h2{
+    text-align: center;
+}
