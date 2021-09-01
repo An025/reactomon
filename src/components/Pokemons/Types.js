@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import Container from '../UI/Container';
+import TypesList from './TypesList';
 import axios from 'axios';
+import classes from './Container.module.css'
 
 function Types() {
   const[types, setTypes] = useState([]);
@@ -11,7 +12,14 @@ function Types() {
       .then(response => setTypes(response.data.results))
     }, [])
     
-    return <Container title={"Types"} types={types}/>
+    // return <Container title={"Types"} types={types}/>
+
+    return (<div className={classes.container} >
+          <h1>Types</h1>
+          <div>
+              <TypesList types={types}/>
+          </div>
+      </div>)
   }
 
 export default Types;

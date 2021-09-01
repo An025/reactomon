@@ -5,12 +5,14 @@ import Image from './Image';
 import logo from './../../images/header.png';
 import classes from './NavBar.module.css';
 import Button from './Button';
+import PokemonDetails from "../Pokemons/PokemonDetails";
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useParams
 } from "react-router-dom";
 
 export default function App(props) {
@@ -32,12 +34,20 @@ export default function App(props) {
             </li>
           </ul>
         </nav>
-
+        </div>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+       
           <Route path="/pokemons">
             <Pokemons />
+          </Route>
+          <Route path="/pokemon/:id"  >
+              
+              <PokemonDetails />
+    
+          <Route/>
+            
           </Route>
           <Route path="/types">
             <Types />
@@ -46,7 +56,7 @@ export default function App(props) {
             <Pokemons />
           </Route>
         </Switch>
-      </div>
+      
     </Router>
   );
 }

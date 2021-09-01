@@ -19,30 +19,21 @@ function PokemonCard(props){
         console.log("pokemon axios")
         axios.get(props.url)
         .then(response => {
-            // console.log(response.data.species)
+            console.log(response.data.species)
             setId(response.data.id)
             setImageUrl(response.data.sprites.front_default);
         })
     },[props.url]);
 
 
-    return (
-        <Router>
-        
+    return (      
             <div key={id} id={id} className={classes.card}>
-                <Link to={`/pokemon/${id}`}>
+                <Link to={`/pokemon/${id}` }>
                     <h2>{props.name}</h2> 
-                    </Link>  
+                </Link>  
                 <Image path={imageUrl} title={props.name}/>
+
             </div>
-       
-        <Switch>
-          <Route path={`/pokemon/${id}`}>
-            <PokemonDetails id={id} />
-          </Route>
-        </Switch>
- 
-     </Router>
     );
 }
 
