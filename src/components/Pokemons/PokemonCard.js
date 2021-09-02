@@ -2,11 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import classes from './PokemonCard.module.css';
 import Image from './../UI/Image';
-import PokemonDetails from './PokemonDetails';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 

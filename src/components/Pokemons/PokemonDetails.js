@@ -21,7 +21,7 @@ function PokemonDetails(props){
           setTypes( response.data.types.map((e) => e.type.name))
       })
       
-    }, [])
+    }, [id])
     console.log(pokemonDetail)
     return (<div className={classes.container}>
             <h1> {pokemonDetail.name}</h1>
