@@ -1,8 +1,8 @@
-My first React app is Reactomon.
+Here is my first React app: Reactomon.
 
-It is available on Netlify: https://reactomon-ani025.netlify.app
+You can find it here : https://reactomon-ani025.netlify.app
 
-I use 
+I used 
 
 - Axios
 - React hooks
