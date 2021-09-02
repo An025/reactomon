@@ -1,7 +1,5 @@
-[build]
-  command = "npm run build"
-  publish="build"
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+
+  [build]
+base = "myapp/"
+publish = "myapp/build/"
+command = "npm run build"
