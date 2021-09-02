@@ -29,7 +29,7 @@ function App(props) {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
     {props.children}
     <GlobalStyles/>
-    <button onClick={onClickHandler}>
+    <button onClick={onClickHandler} id="switcher">
        <Image path={imgUrl} title={theme}/>
     </button>
     <NavBar/>
