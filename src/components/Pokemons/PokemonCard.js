@@ -24,7 +24,7 @@ function PokemonCard(props){
 
     return (      
             <div key={id} id={id} className={classes.card}>
-                <Link to={`/pokemon/${id}` }>
+                <Link className={classes.link} to={`/pokemon/${id}`}>
                     <h2>{props.name}</h2> 
                 </Link>  
                 <Image path={imageUrl} title={props.name}/>

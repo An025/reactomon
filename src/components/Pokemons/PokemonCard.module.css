@@ -13,3 +13,8 @@
 .card h2{
     text-align: center;
 }
+
+.link{
+    text-decoration: none;
+    color: #82C3DF;
+}
