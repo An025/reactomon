@@ -1,15 +1,40 @@
-
+import React, {useState} from 'react';
 import './App.css';
+import { ThemeProvider } from 'styled-components';
 import NavBar from './components/UI/NavBar';
-import styled from 'styled-components';
+import { lightTheme, darkTheme } from './components/UI/Theme';
+import Image from './components/UI/Image'
+import { GlobalStyles } from './components/UI/GlobalStyle';
+import moon from './images/moon.png';
 
-// const NavBar =styled.button`
-//   font-family: sans-serif;
-// `
+import sun from './images/sun.png';
 
-function App() {
+
+
+function App(props) {
+  const [theme, setTheme] = useState('light');
+  const [imgUrl, setImgUrl] = useState(moon);
+  const onClickHandler = () => {
+    if(theme === 'light'){
+      setTheme('dark');
+      setImgUrl(sun);
+
+    }else{
+      setTheme('light');
+      setImgUrl(moon);
+    }
+  }
+    
   return (
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    {props.children}
+    <GlobalStyles/>
+    <button onClick={onClickHandler}>
+       <Image path={imgUrl} title={theme}/>
+    </button>
     <NavBar/>
+    </ThemeProvider>
+
   );
 }
 
